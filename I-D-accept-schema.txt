@@ -4,8 +4,9 @@
 
 Internet Engineering Task Force                              L. Svensson
 Internet-Draft                               Deutsche Nationalbibliothek
-Intended status: Standards Track                          April 21, 2017
-Expires: October 23, 2017
+Intended status: Standards Track                             R. Verborgh
+Expires: October 23, 2017                        Ghent University - imec
+                                                          April 21, 2017
 
 
                       Negotiating Profiles in HTTP
@@ -49,15 +50,15 @@ Copyright Notice
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
-   (http://trustee.ietf.org/license-info) in effect on the date of
 
 
 
-Svensson                Expires October 23, 2017                [Page 1]
+Svensson & Verborgh     Expires October 23, 2017                [Page 1]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
+   (http://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
@@ -84,7 +85,7 @@ Table of Contents
    8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  12
      8.1.  Normative References  . . . . . . . . . . . . . . . . . .  12
      8.2.  Informative References  . . . . . . . . . . . . . . . . .  12
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  14
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  14
 
 1.  Introduction
 
@@ -105,15 +106,15 @@ Table of Contents
    instance, the same content can be encoded using one of several DTDs
    or XML Schemas, whereas in RDF there is a wide choice of RDF
    vocabularies (classes and properties) available to describe resources
-   of the same type.  When a UA initiates a request, e.g., a GET request
 
 
 
-Svensson                Expires October 23, 2017                [Page 2]
+Svensson & Verborgh     Expires October 23, 2017                [Page 2]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
+   of the same type.  When a UA initiates a request, e.g., a GET request
    to retrieve or a PUT request to create or replace a resource, neither
    the UA nor the server have any possibility to exchange information on
    how the transmitted resource will be structured precisely.  This
@@ -161,15 +162,15 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
        semantics that can be used to process a resource representation,
        such as constraints, conventions, extensions, or any other
        aspects that do not alter the basic media type semantics."  This
-       header can be used for a client to specify what profile it would
 
 
 
-Svensson                Expires October 23, 2017                [Page 3]
+Svensson & Verborgh     Expires October 23, 2017                [Page 3]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
+       header can be used for a client to specify what profile it would
        the requested resource to conform to.  This option offers no
        possibility to use q-values and thus does not allow the UA and
        the server to properly negotiate which profile to use.
@@ -220,8 +221,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-
-Svensson                Expires October 23, 2017                [Page 4]
+Svensson & Verborgh     Expires October 23, 2017                [Page 4]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -277,7 +277,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017                [Page 5]
+Svensson & Verborgh     Expires October 23, 2017                [Page 5]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -333,7 +333,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017                [Page 6]
+Svensson & Verborgh     Expires October 23, 2017                [Page 6]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -389,7 +389,7 @@ profile-value =  "<" URI-reference ">" [weight] |
 
 
 
-Svensson                Expires October 23, 2017                [Page 7]
+Svensson & Verborgh     Expires October 23, 2017                [Page 7]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -445,7 +445,7 @@ Profile = "Profile" ":"  "<" URI-reference ">" |
 
 
 
-Svensson                Expires October 23, 2017                [Page 8]
+Svensson & Verborgh     Expires October 23, 2017                [Page 8]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -501,7 +501,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017                [Page 9]
+Svensson & Verborgh     Expires October 23, 2017                [Page 9]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -557,7 +557,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017               [Page 10]
+Svensson & Verborgh     Expires October 23, 2017               [Page 10]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -613,7 +613,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017               [Page 11]
+Svensson & Verborgh     Expires October 23, 2017               [Page 11]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -669,7 +669,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017               [Page 12]
+Svensson & Verborgh     Expires October 23, 2017               [Page 12]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -725,7 +725,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson                Expires October 23, 2017               [Page 13]
+Svensson & Verborgh     Expires October 23, 2017               [Page 13]
 
 Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
@@ -734,7 +734,7 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
               "XML Schema Part 1: Structures Second Edition", 2004,
               <http://www.w3.org/TR/xmlschema-1/>.
 
-Author's Address
+Authors' Addresses
 
    Lars G. Svensson
    Deutsche Nationalbibliothek
@@ -746,6 +746,14 @@ Author's Address
    Email: l.svensson@dnb.de
 
 
+   Ruben Verborgh
+   Ghent University - imec
+   Sint-Pietersnieuwstraat 41
+   Ghent  9000
+   Belgium
+
+   Phone: +32 9 331 49 10
+   Email: ruben.verborgh@ugent.be
 
 
 
@@ -773,12 +781,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-Svensson                Expires October 23, 2017               [Page 14]
+Svensson & Verborgh     Expires October 23, 2017               [Page 14]
