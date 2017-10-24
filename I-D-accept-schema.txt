@@ -5,8 +5,8 @@
 Internet Engineering Task Force                              L. Svensson
 Internet-Draft                               Deutsche Nationalbibliothek
 Intended status: Standards Track                             R. Verborgh
-Expires: October 23, 2017                        Ghent University - imec
-                                                          April 21, 2017
+Expires: April 27, 2018                          Ghent University - imec
+                                                        October 24, 2017
 
 
                       Negotiating Profiles in HTTP
@@ -34,14 +34,14 @@ Status of This Memo
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
    working documents as Internet-Drafts.  The list of current Internet-
-   Drafts is at http://datatracker.ietf.org/drafts/current/.
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
 
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 23, 2017.
+   This Internet-Draft will expire on April 27, 2018.
 
 Copyright Notice
 
@@ -53,12 +53,12 @@ Copyright Notice
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 1]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 1]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
-   (http://trustee.ietf.org/license-info) in effect on the date of
+   (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 2]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 2]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    of the same type.  When a UA initiates a request, e.g., a GET request
@@ -165,9 +165,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 3]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 3]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
        header can be used for a client to specify what profile it would
@@ -221,9 +221,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 4]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 4]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
                                  Example:
@@ -250,8 +250,8 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
                                  Example:
 
    GET /some/resource HTTP/1.1
-   Accept: text/turtle;q=0.9;profile=<urn:example:profile-1>,
-                   text/turtle;q=0.7;profile=<urn:example:profile-2>
+   Accept: text/turtle;q=0.9;profile="urn:example:profile-1",
+                   text/turtle;q=0.7;profile="urn:example:profile-2";
 
    HTTP/1.1 200 OK
    Content-Type: text/turtle;profile=<urn:example:profile-2>
@@ -277,9 +277,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 5]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 5]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
        is because the server did not understand the "Prefer" header in
@@ -333,9 +333,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 6]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 6]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 3.1.  Accept-Profile Header Syntax
@@ -389,9 +389,9 @@ profile-value =  "<" URI-reference ">" [weight] |
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 7]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 7]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    xsi:schemaLocation attribute.  If a client uses the "Accept-Profile"
@@ -445,9 +445,9 @@ Profile = "Profile" ":"  "<" URI-reference ">" |
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 8]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 8]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    A client requests an XML document conforming to a specific XML
@@ -501,9 +501,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017                [Page 9]
+Svensson & Verborgh      Expires April 27, 2018                 [Page 9]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    A client PUTs a turtle document conforming to the RDF Shape
@@ -557,9 +557,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017               [Page 10]
+Svensson & Verborgh      Expires April 27, 2018                [Page 10]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 6.  IANA Considerations
@@ -613,9 +613,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017               [Page 11]
+Svensson & Verborgh      Expires April 27, 2018                [Page 11]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 7.  Security Considerations
@@ -634,22 +634,22 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
-              <http://www.rfc-editor.org/info/rfc2119>.
+              <https://www.rfc-editor.org/info/rfc2119>.
 
    [RFC5234]  Crocker, D., Ed. and P. Overell, "Augmented BNF for Syntax
               Specifications: ABNF", STD 68, RFC 5234,
               DOI 10.17487/RFC5234, January 2008,
-              <http://www.rfc-editor.org/info/rfc5234>.
+              <https://www.rfc-editor.org/info/rfc5234>.
 
    [RFC7230]  Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
               Protocol (HTTP/1.1): Message Syntax and Routing",
               RFC 7230, DOI 10.17487/RFC7230, June 2014,
-              <http://www.rfc-editor.org/info/rfc7230>.
+              <https://www.rfc-editor.org/info/rfc7230>.
 
    [RFC7231]  Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
               Protocol (HTTP/1.1): Semantics and Content", RFC 7231,
               DOI 10.17487/RFC7231, June 2014,
-              <http://www.rfc-editor.org/info/rfc7231>.
+              <https://www.rfc-editor.org/info/rfc7231>.
 
 8.2.  Informative References
 
@@ -669,9 +669,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017               [Page 12]
+Svensson & Verborgh      Expires April 27, 2018                [Page 12]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    [rachelandheery]
@@ -681,28 +681,28 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
    [RFC3236]  Baker, M. and P. Stark, "The 'application/xhtml+xml' Media
               Type", RFC 3236, DOI 10.17487/RFC3236, January 2002,
-              <http://www.rfc-editor.org/info/rfc3236>.
+              <https://www.rfc-editor.org/info/rfc3236>.
 
    [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
               Procedures for Message Header Fields", BCP 90, RFC 3864,
               DOI 10.17487/RFC3864, September 2004,
-              <http://www.rfc-editor.org/info/rfc3864>.
+              <https://www.rfc-editor.org/info/rfc3864>.
 
    [RFC3870]  Swartz, A., "application/rdf+xml Media Type Registration",
               RFC 3870, DOI 10.17487/RFC3870, September 2004,
-              <http://www.rfc-editor.org/info/rfc3870>.
+              <https://www.rfc-editor.org/info/rfc3870>.
 
    [RFC5988]  Nottingham, M., "Web Linking", RFC 5988,
               DOI 10.17487/RFC5988, October 2010,
-              <http://www.rfc-editor.org/info/rfc5988>.
+              <https://www.rfc-editor.org/info/rfc5988>.
 
    [RFC6906]  Wilde, E., "The 'profile' Link Relation Type", RFC 6906,
               DOI 10.17487/RFC6906, March 2013,
-              <http://www.rfc-editor.org/info/rfc6906>.
+              <https://www.rfc-editor.org/info/rfc6906>.
 
    [RFC7240]  Snell, J., "Prefer Header for HTTP", RFC 7240,
               DOI 10.17487/RFC7240, June 2014,
-              <http://www.rfc-editor.org/info/rfc7240>.
+              <https://www.rfc-editor.org/info/rfc7240>.
 
    [SHACL]    Knublauch, H. and A. Ryman, "Shapes Constraint Language
               (SHACL): W3C First Public Working Draft 08 October 2015",
@@ -725,9 +725,9 @@ Internet-Draft        Negotiating Profiles in HTTP            April 2017
 
 
 
-Svensson & Verborgh     Expires October 23, 2017               [Page 13]
+Svensson & Verborgh      Expires April 27, 2018                [Page 13]
 
-Internet-Draft        Negotiating Profiles in HTTP            April 2017
+Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
    [XSD]      Thompson, H., Beech, D., Maloney, M., and N. Mendelsohn,
@@ -781,4 +781,4 @@ Authors' Addresses
 
 
 
-Svensson & Verborgh     Expires October 23, 2017               [Page 14]
+Svensson & Verborgh      Expires April 27, 2018                [Page 14]
