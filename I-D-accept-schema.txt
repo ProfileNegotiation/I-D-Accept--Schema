@@ -5,8 +5,8 @@
 Internet Engineering Task Force                              L. Svensson
 Internet-Draft                               Deutsche Nationalbibliothek
 Intended status: Standards Track                             R. Verborgh
-Expires: April 27, 2018                          Ghent University - imec
-                                                        October 24, 2017
+Expires: September 10, 2019                      Ghent University - imec
+                                                           March 9, 2017
 
 
                       Negotiating Profiles in HTTP
@@ -14,17 +14,18 @@ Expires: April 27, 2018                          Ghent University - imec
 
 Abstract
 
-   This document defines two new HTTP headers that enable User Agents
-   and hosts to indicate and negotiate the profile used to represent a
-   specific resource.  In this context, a profile is a document
-   describing the structural and/or semantic constraints of a group of
-   documents in addition to the syntactical interpretation provided by a
-   MIME type.  Examples of profiles include Dublin Core Application
-   Profiles, XML Schemata and RDF Shape Expressions.  Further, it
-   defines and registers the profile parameter for the HTTP Link header
-   and suggests a best practice for the use of the new headers together
-   with the Link header to perform content negotiation and point clients
-   to alternate representations.
+   This document defines two new HTTP headers "Content-Profile" and
+   "Accept-Profile" that enable User Agents and hosts to indicate and
+   negotiate the profile used for representing a specific resource.  In
+   this context, a profile is a description of the structural and/or
+   semantic constraints of a group of documents in addition to the
+   syntactical interpretation provided by more generic MIME types.
+   Examples of profiles include Dublin Core Application Profiles, XML
+   Schemata, and RDF Shape Expressions.  This document further defines
+   and registers the "profile" parameter for the HTTP "Link" header and
+   suggests a best practice for the use of the new headers together with
+   the "Link" header for the purposes of performing content negotiation
+   and pointing clients to alternate representations.
 
 Status of This Memo
 
@@ -41,23 +42,24 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 27, 2018.
+   This Internet-Draft will expire on September 10, 2019.
 
 Copyright Notice
 
    Copyright (c) 2017 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
+
+
+
+
+Svensson & Verborgh    Expires September 10, 2019               [Page 1]
+
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
+
+
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
-
-
-
-Svensson & Verborgh      Expires April 27, 2018                 [Page 1]
-
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
-
-
    (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
@@ -104,16 +106,16 @@ Table of Contents
    In many cases, there are several ways to describe a resource within
    the scope of the media type.  In the case of XML documents, for
    instance, the same content can be encoded using one of several DTDs
+
+
+
+Svensson & Verborgh    Expires September 10, 2019               [Page 2]
+
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
+
+
    or XML Schemas, whereas in RDF there is a wide choice of RDF
    vocabularies (classes and properties) available to describe resources
-
-
-
-Svensson & Verborgh      Expires April 27, 2018                 [Page 2]
-
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
-
-
    of the same type.  When a UA initiates a request, e.g., a GET request
    to retrieve or a PUT request to create or replace a resource, neither
    the UA nor the server have any possibility to exchange information on
@@ -160,16 +162,16 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
        "profile" [RFC 6906] [RFC6906], that offers the possibility to
        associate a resource with a document describing "additional
        semantics that can be used to process a resource representation,
+
+
+
+Svensson & Verborgh    Expires September 10, 2019               [Page 3]
+
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
+
+
        such as constraints, conventions, extensions, or any other
        aspects that do not alter the basic media type semantics."  This
-
-
-
-Svensson & Verborgh      Expires April 27, 2018                 [Page 3]
-
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
-
-
        header can be used for a client to specify what profile it would
        the requested resource to conform to.  This option offers no
        possibility to use q-values and thus does not allow the UA and
@@ -219,11 +221,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-
-
-Svensson & Verborgh      Expires April 27, 2018                 [Page 4]
+Svensson & Verborgh    Expires September 10, 2019               [Page 4]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
                                  Example:
@@ -277,9 +277,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                 [Page 5]
+Svensson & Verborgh    Expires September 10, 2019               [Page 5]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
        is because the server did not understand the "Prefer" header in
@@ -333,9 +333,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                 [Page 6]
+Svensson & Verborgh    Expires September 10, 2019               [Page 6]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
 3.1.  Accept-Profile Header Syntax
@@ -389,9 +389,9 @@ profile-value =  "<" URI-reference ">" [weight] |
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                 [Page 7]
+Svensson & Verborgh    Expires September 10, 2019               [Page 7]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
    xsi:schemaLocation attribute.  If a client uses the "Accept-Profile"
@@ -445,9 +445,9 @@ Profile = "Profile" ":"  "<" URI-reference ">" |
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                 [Page 8]
+Svensson & Verborgh    Expires September 10, 2019               [Page 8]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
    A client requests an XML document conforming to a specific XML
@@ -501,9 +501,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                 [Page 9]
+Svensson & Verborgh    Expires September 10, 2019               [Page 9]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
    A client PUTs a turtle document conforming to the RDF Shape
@@ -557,9 +557,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                [Page 10]
+Svensson & Verborgh    Expires September 10, 2019              [Page 10]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
 6.  IANA Considerations
@@ -613,9 +613,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                [Page 11]
+Svensson & Verborgh    Expires September 10, 2019              [Page 11]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
 7.  Security Considerations
@@ -669,9 +669,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                [Page 12]
+Svensson & Verborgh    Expires September 10, 2019              [Page 12]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
    [rachelandheery]
@@ -725,9 +725,9 @@ Internet-Draft        Negotiating Profiles in HTTP          October 2017
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                [Page 13]
+Svensson & Verborgh    Expires September 10, 2019              [Page 13]
 
-Internet-Draft        Negotiating Profiles in HTTP          October 2017
+Internet-Draft        Negotiating Profiles in HTTP            March 2017
 
 
    [XSD]      Thompson, H., Beech, D., Maloney, M., and N. Mendelsohn,
@@ -781,4 +781,4 @@ Authors' Addresses
 
 
 
-Svensson & Verborgh      Expires April 27, 2018                [Page 14]
+Svensson & Verborgh    Expires September 10, 2019              [Page 14]
